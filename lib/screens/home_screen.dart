@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   
-  List<IconData> icons = [
+  List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
     FontAwesomeIcons.walking,
@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Theme.of(context).accentColor,
          borderRadius: BorderRadius.circular(30.0), 
         ),
-        child: Icon(icons[index], size: 25.0, color: Theme.of(context).primaryColor, ),
+        child: Icon(_icons[index], size: 25.0, color: Theme.of(context).primaryColor, ),
     );
   }
 
@@ -47,7 +47,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           SizedBox(height: 20.0),
-          _buildIcon(0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: _icons.asMap().entries.map(
+              (MapEntry map) => _buildIcon(map.key),
+          ).toList(),
+          )
         ],
       )),
     );
