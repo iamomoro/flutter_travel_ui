@@ -19,14 +19,23 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   Widget _buildIcon(int index) {
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedIndex = index;
+        });
+        print(_selectedIndex);
+      },
+      child: Container(
       height: 60.00,
       width: 60.00,
       decoration: BoxDecoration(
-        color: Theme.of(context).accentColor,
+        color: _selectedIndex == index ? Theme.of(context).accentColor : Color(0xFFE7EBEE),
          borderRadius: BorderRadius.circular(30.0), 
         ),
-        child: Icon(_icons[index], size: 25.0, color: Theme.of(context).primaryColor, ),
+        child: Icon(_icons[index], size: 25.0, color: _selectedIndex == index ? Theme.of(context).primaryColor : Color(0xFFB4C1C4), ), 
+    ),
+      
     );
   }
 
