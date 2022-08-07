@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ).toList(),
           ),
           Column(children: <Widget>[
-            Text('Top Destinations', style: TextStyle(fontSize: 10)),
+            Text('Top Destinations', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, letterSpacing: 1.5,),),
             Text('See All'),
           ])
         ],
