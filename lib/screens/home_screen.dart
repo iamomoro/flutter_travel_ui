@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
     FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.biking, 
   ];
 
   Widget _buildIcon(int index) {
