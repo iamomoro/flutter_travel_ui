@@ -62,7 +62,11 @@ class _HomeScreenState extends State<HomeScreen> {
             children: _icons.asMap().entries.map(
               (MapEntry map) => _buildIcon(map.key),
           ).toList(),
-          )
+          ),
+          Column(children: <Widget>[
+            Text('Top Destinations', style: TextStyle(fontSize: 10)),
+            Text('See All'),
+          ])
         ],
       )),
     );
