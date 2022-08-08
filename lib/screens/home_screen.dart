@@ -68,9 +68,11 @@ class _HomeScreenState extends State<HomeScreen> {
             Text('See All', style: TextStyle(color: Theme.of(context).primaryColor,
             fontSize: 16.0, fontWeight: FontWeight.w600, letterSpacing: 1.0,),
             ),
-          ])
+          ],
+          ),
         ],
-      )),
+      ),
+      ),
     );
   }
 }
