@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:flutter/flutter_travel_';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -63,21 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
               (MapEntry map) => _buildIcon(map.key),
           ).toList(),
           ),
-          Column(children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text('Top Destinations', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, letterSpacing: 1.5,),),
-                  Text('See All', style: TextStyle(color: Theme.of(context).primaryColor,
-              fontSize: 16.0, fontWeight: FontWeight.w600, letterSpacing: 1.0,),  ),
-                ],
- 
-           ),
-            ),
-          ],
-          ),
+          SizedBox(height: 20.0,),
+         DestinationCarousel(),
         ],
       ),
       ),
