@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui/models/destination_model.dart';
 
 class DestinationCarousel extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class DestinationCarousel extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -34,6 +35,17 @@ class DestinationCarousel extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        Container(
+          height: 300.0,
+          color: Colors.blue,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: destinations.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Text(destinations[index].city);
+            },
           ),
         ),
       ],
