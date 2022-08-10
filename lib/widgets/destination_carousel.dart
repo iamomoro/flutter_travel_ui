@@ -44,7 +44,36 @@ class DestinationCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: destinations.length,
             itemBuilder: (BuildContext context, int index) {
-              return Text(destinations[index].city);
+              Destination destination = destinations[index];
+              return Container(
+                margin: EdgeInsets.all(10.0),
+                width: 210.0,
+                color: Colors.red,
+                child: Stack(
+                  children: <Widget>[
+                  Container(
+                   height: 120.0,
+                   width: 200.0,
+                   decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10.0),
+                   ),
+                   child: Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: <Widget>[
+                     Text('${destination.activities.length} activities',
+                     style: TextStyle(
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.2,
+                     ),
+                     ),
+                     Text(destination.description),
+                  ],),
+                   ),
+                ],
+                ),
+              );
             },
           ),
         ),
