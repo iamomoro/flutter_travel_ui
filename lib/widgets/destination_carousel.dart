@@ -87,7 +87,18 @@ class DestinationCarousel extends StatelessWidget {
                          offset: Offset(0.0, 2.0),
                          blurRadius: 6.0,
                          ),
-                       ]),
+                       ]
+                       ),
+                       child: Stack(
+                        children: <Widget>[
+                         Image(
+                          height: 180.0, 
+                          width: 180.0,
+                          image: AssetImage(destination.imageUrl),
+                          fit: BoxFit.cover,
+                          )
+                        ]
+                       ),
                        )
                 ],
                 ),
