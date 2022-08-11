@@ -58,22 +58,37 @@ class DestinationCarousel extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10.0),
                    ),
-                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     children: <Widget>[
-                     Text('${destination.activities.length} activities',
-                     style: TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 1.2,
-                     ),
-                     ),
-                     Text(destination.description, style: TextStyle(
-                      color: Colors.grey,
-                     )),
+                   child: Padding(
+                     padding: const EdgeInsets.all(10.0),
+                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                       crossAxisAlignment: CrossAxisAlignment.start,
+                       children: <Widget>[
+                       Text('${destination.activities.length} activities',
+                       style: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1.2,
+                       ),
+                       ),
+                       Text(destination.description, style: TextStyle(
+                        color: Colors.grey,
+                       )),
                   ],),
                    ),
+                   ),
+                Container (
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                         offset: Offset(0.0, 2.0),
+                         blurRadius: 6.0,
+                         ),
+                       ]),
+                       )
                 ],
                 ),
               );
