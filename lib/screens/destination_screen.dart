@@ -136,6 +136,48 @@ class _DestinationScreenState extends State<DestinationScreen> {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20.0),
                       ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(activity.name),
+                              Text('\$${activity.price}'),
+                            ],
+                          ),
+                          Text(activity.type),
+                          // _buildRatingStars(activity.rating),
+                          SizedBox(height: 10.0),
+                          Row(
+                            children: [
+                              Container(
+                                width: 70.0,
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).accentColor,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                alignment: Alignment.center,
+                                child: Text(
+                                  activity.startTimes[0],
+                                ),
+                              ),
+                              SizedBox(width: 10.0,),
+                              Container(
+                                width: 70.0,
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).accentColor,
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                alignment: Alignment.center,
+                                child: Text(
+                                  activity.startTimes[0],
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                     )
                   ],
                 );
